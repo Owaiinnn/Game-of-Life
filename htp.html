@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Game of Life</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="images/logo.png" alt="Logo" width="75" height="25" class="d-inline-block align-text-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="website.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="htp.html">How to play</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="backstory.html">Backstory</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- How to Play Section -->
+    <div class="container mt-5">
+        <h1 class="mb-4">How to Play Conway's Game of Life</h1>
+
+        <h3>Overview</h3>
+        <p>Conway’s Game of Life is a zero-player game where the evolution depends on its initial configuration. 
+           The game simulates how "life" evolves on a two-dimensional grid where cells can be either alive or dead.</p>
+
+        <h3>The Grid</h3>
+        <p>The universe of the Game of Life consists of a two-dimensional grid. Each square in the grid represents a cell, 
+           and each cell can either be alive (on) or dead (off). The fate of each cell depends on its eight neighboring cells.</p>
+
+        <h3>Game Rules</h3>
+        <ul>
+            <li><strong>Survival:</strong> A living cell with two or three neighbors remains alive.</li>
+            <li><strong>Death:</strong> A living cell with fewer than two neighbors dies from underpopulation, and one with more than three neighbors dies from overcrowding.</li>
+            <li><strong>Reproduction:</strong> A dead cell with exactly three living neighbors becomes alive, representing reproduction.</li>
+        </ul>
+
+        <h3>How to Play</h3>
+        <ol>
+            <li><strong>Setup the Initial State:</strong> Begin by setting an initial configuration of alive and dead cells. You can create patterns manually or use random configurations.</li>
+            <li><strong>Apply the Rules:</strong> The rules are applied simultaneously to all cells in the grid, generating a new "generation" of cells based on their neighbors.</li>
+            <li><strong>Observe the Patterns:</strong> Watch as complex structures like gliders and oscillators emerge from simple configurations.</li>
+            <li><strong>Repeat:</strong> The game evolves over multiple generations without any further input from the player.</li>
+        </ol>
+
+        <h3>Common Patterns</h3>
+        <ul>
+            <li><strong>Still Lifes:</strong> Static patterns that don't change over time, such as the "block" or "beehive."</li>
+            <li><strong>Oscillators:</strong> Patterns that cycle through a set of states, like the "blinker" or "toad."</li>
+            <li><strong>Spaceships:</strong> Moving patterns like the famous "glider" that travels diagonally across the grid.</li>
+            <li><strong>Methuselahs:</strong> Patterns that evolve for a long time before stabilizing, like the "R-pentomino."</li>
+        </ul>
+
+        <h3>How to Experiment</h3>
+        <p>You can experiment with different configurations or use preset patterns to explore how different structures evolve over time. Some versions of the game allow you to change the rules and observe how these alterations affect the evolution of life.</p>
+
+        <h3>Conclusion</h3>
+        <p>Conway's Game of Life is a fascinating exploration of complexity emerging from simplicity. Experiment with various initial configurations to observe how patterns form, evolve, and sometimes reach stability or chaos!</p>
+    </div>
+
+    <script src="gameoflife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
